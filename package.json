@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@ethereum-attestation-service/eas-sdk": "^2.7.0",
+    "axios": "^1.7.9",
     "ethers": "^6.13.4",
     "openai": "^4.76.0"
   }
