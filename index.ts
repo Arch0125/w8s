@@ -10,7 +10,7 @@ const client = new OpenAI({
 });
 
 export async function forcedTestsCheck() {
-    const testFilePath = path.resolve(__dirname, './hardhat/test/Lock.ts');
+    const testFilePath = path.resolve(__dirname, './hardhat/test/VulnerableERC20.ts');
 
     let messages = []
 

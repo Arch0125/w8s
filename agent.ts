@@ -9,11 +9,11 @@ async function main(){
     const forcedTest = await forcedTestsCheck();
 
     
-    const contractAddress = await deployContract("Lock", ["base"], Date.now()+10000);
+    const contractAddress = await deployContract("VulnerableERC20", ["base","holesky"], []);
     
     console.log("Contract deployed at:", contractAddress);
     
-    const blobIds = await uploadBlob("Lock")
+    const blobIds = await uploadBlob("VulnerableERC20")
     
     const attestation  = await createAttestation(JSON.stringify(coverage), JSON.stringify(forcedTest), JSON.stringify(contractAddress), blobIds.contractBlobId, blobIds.abiBlobId);
 }

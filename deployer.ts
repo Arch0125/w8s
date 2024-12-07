@@ -23,7 +23,7 @@ export async function deployContract(contractName: string, networks: string[], c
         const contractFactory = new ethers.ContractFactory(contractJson.abi, contractJson.bytecode, wallet);
 
         console.log(`Deploying ${contractName} to ${network}...`);
-        const contract = await contractFactory.deploy(construtor);
+        const contract = await contractFactory.deploy();
 
         await contract.waitForDeployment();
         console.log(`${contractName} deployed to: ${contract.target}`);

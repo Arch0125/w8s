@@ -42,7 +42,7 @@ export async function uploadBlob(contractName: string) {
             throw new Error("Unexpected response format");
         }
 
-        const responseabi = await axios.put("https://publisher.walrus-testnet.walrus.space/v1/store", contractContent, {
+        const responseabi = await axios.put("https://publisher.walrus-testnet.walrus.space/v1/store", contractJson, {
             headers: {
                 "Content-Type": "text/plain"
             }
